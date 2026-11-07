@@ -63,4 +63,11 @@ def manual_iteration_trace(items: list) -> list:
     Return a list of all elements retrieved this way, in order
     (it should exactly match the original `items` list).
     """
-    return items
+    result = []
+    iteracter = iter(items)
+    i = 0
+    while i < len(items):
+        value = next(iteracter)
+        result.append(value)
+        i += 1
+    return result
